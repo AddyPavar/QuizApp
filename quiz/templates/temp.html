@@ -1,0 +1,16 @@
+
+{% load staticfiles %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+            <script src="{% static 'js/inc/TimeCircles.js' %}"></script>
+
+         <link href="{% static 'js/inc/TimeCircles.css' %}"   rel="stylesheet">
+
+            <div id="CountDownTimer" data-timer="{{ timeLimit }}" style="width: 750px; height: 125px; float: right"></div>
+
+        <script>
+
+            $("#CountDownTimer").TimeCircles({ time: { Days: { show: false }, Hours: { show: false } }});
+
+
+        </script>       

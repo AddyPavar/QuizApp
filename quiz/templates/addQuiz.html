@@ -1,0 +1,90 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block body_block %}
+<section class="content">
+        <div class="container-fluid">
+
+
+            <!-- Vertical Layout -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                ADD QUIZ DETAIL
+                            </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <form action="/manage/dbQuiz/" method="get">
+                                <div class="col-sm-6">
+                                    <label for="Date">Date</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="date" id="Date" name = "Date" class="form-control" placeholder="Date of quiz" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="Time">Time</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="time" id="Time" name = "Time" class="form-control" placeholder="Time of quiz" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="Name">Name of Quiz</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" id="Name" name="Name" class="form-control" placeholder="Name of quiz"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="subject">Name of Subject</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject Name"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="timeLimit">Time Limit(in Minutes)</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="number" id="timeLimit" name="timeLimit" class="form-control" placeholder="Time Limit"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="Total">Total number of quetions</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" id="total" name="total" class="form-control" placeholder="Total # of Que."/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" id = "subby" class="btn btn-primary m-t-15 waves-effect">ADD</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+{% endblock %}
